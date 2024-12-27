@@ -1,4 +1,5 @@
 # SR-FLIPFLOP-USING-CASE
+**DATE: 15/11/2024**
 
 **AIM:**
 
@@ -51,13 +52,29 @@ Program for flipflops and verify its truth table in quartus using Verilog progra
 Developed by: CHARUKESH S
 
 Register Number: 212224230044
+```
+module sr_ff(s,r,clk,q,qbar);
+input s,r,clk;
+output reg q;
+output reg qbar;
+initial 
+begin
+q=0;
+qbar=1;
+end
+always @(posedge clk)
+begin
+   q=s|(~r&q);
+   qbar=r|(~s&~q);
+end
+endmodule
+```
 
-
-**RTL LOGIC FOR FLIPFLOPS**
+**RTL DIAGRAM**
 
 ![image](https://github.com/user-attachments/assets/e7e78919-2156-4cc0-8974-c97803a004fb)
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+**TIMING WAVEFORM**
 
 ![image](https://github.com/user-attachments/assets/95fb411a-b960-4ff8-bd6b-d92eb80abfbc)
 
