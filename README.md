@@ -53,7 +53,7 @@ Developed by: CHARUKESH S
 
 Register Number: 212224230044
 ```
-module sr_ff(s,r,clk,q,qbar);
+module SR(s,r,clk,q,qbar);
 input s,r,clk;
 output reg q;
 output reg qbar;
@@ -80,6 +80,6 @@ endmodule
 ![image](https://github.com/user-attachments/assets/8fe67f50-4297-4bcc-817d-786f94018d4b)
 
 
-**RESULTS**
+**RESULT**
 
 The observation of the simulation results and confirm the successful execution of the program.
